@@ -1,4 +1,5 @@
 import React from "react";
+import Display from "./Display";
 
 class Dashboard extends React.Component {
   render() {
@@ -10,6 +11,9 @@ class Dashboard extends React.Component {
           <button>Ball</button>
           <button>Foul</button>
           <button>Hit</button>
+        </div>
+        <div>
+          <Display />
         </div>
       </>
     );
