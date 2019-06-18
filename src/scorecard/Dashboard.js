@@ -23,7 +23,7 @@ class Dashboard extends React.Component {
       }
 
       case 1: {
-        numStrikes = numStrikes + 2;
+        numStrikes = numStrikes + 1;
         break;
       }
       case 2: {
@@ -80,6 +80,9 @@ class Dashboard extends React.Component {
           </button>
           <button title="buttonHit" onClick={this.handleHit}>
             Hit
+          </button>
+          <button title="buttonStrike" onClick={this.handleFoul}>
+            Strike
           </button>
         </div>
         <div>
