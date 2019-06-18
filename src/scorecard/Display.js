@@ -1,38 +1,29 @@
 import React from "react";
 
 class Display extends React.Component {
-  state = {
-    balls: 0,
-    strikes: 0
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      balls: props.balls,
+      strikes: props.strikes
+    };
+  }
 
-  handleChange = e => {
-    e.persist();
-    this.setState({
-      ...this.state,
-      [e.targe.name]: e.target.value
-    });
-  };
   render() {
     return (
       <>
         <div>
           {" "}
           Balls:{" "}
-          <input
-            type="text"
-            name="balls"
-            value={this.state.balls}
-            onChange={this.handleChange}
-          />
+          <input type="text" name="balls" value={this.props.balls} readOnly />
         </div>
         <div>
           Strikes:{" "}
           <input
             type="text"
             name="strikes"
-            value={this.state.strikes}
-            onChange={this.handleChange}
+            value={this.props.strikes}
+            readOnly
           />
         </div>
       </>

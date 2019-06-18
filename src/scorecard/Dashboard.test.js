@@ -9,14 +9,6 @@ describe("Dashboard", () => {
   });
   describe("Display Buttons", () => {
     it.todo("Dashboard must have 4 buttons - Strike, Ball, Foul, Hit");
-    it("Button Strike available", () => {
-      const { getAllByText } = render(<Dashboard />);
-      expect(getAllByText(/Strike/i)).not.toBeNull();
-    });
-    it("Button Ball available", () => {
-      const { getAllByText } = render(<Dashboard />);
-      expect(getAllByText(/Ball/i)).not.toBeNull();
-    });
     it("Button Foul available", () => {
       const { getByText } = render(<Dashboard />);
       expect(getByText(/Foul/i)).not.toBeNull();
