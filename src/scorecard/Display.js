@@ -15,7 +15,13 @@ class Display extends React.Component {
         <div>
           {" "}
           Balls:{" "}
-          <input type="text" name="balls" value={this.props.balls} readOnly />
+          <input
+            type="text"
+            name="balls"
+            title="inputBalls"
+            value={this.props.balls}
+            readOnly
+          />
         </div>
         <div>
           Strikes:{" "}
@@ -23,6 +29,7 @@ class Display extends React.Component {
             type="text"
             name="strikes"
             value={this.props.strikes}
+            title="inputStrikes"
             readOnly
           />
         </div>
